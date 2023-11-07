@@ -1,0 +1,144 @@
+POST  http://localhost:3000/flights/src/latlong HTTP/1.1
+content-type: application/json
+{
+    "src": "mumbai"
+}
+
+###
+
+POST  http://localhost:3000/flights/dest/latlong HTTP/1.1
+content-type: application/json
+
+{
+    "dest": "goa"
+}
+
+###
+
+POST  http://localhost:3000/flights/airport HTTP/1.1
+content-type: application/json
+
+{
+    "lat": "19.0760",
+    "lon": "72.8777"
+}
+
+
+###
+
+POST http://localhost:3000/flights/getprices
+content-type: application/json
+
+{
+    "src": "BOM",
+    "dest": "GOI",
+    "date": "2020-12-10"
+}
+###
+
+POST http://localhost:3000/flights/test
+
+###
+POST  http://localhost:3000/hotels HTTP/1.1
+content-type: application/json
+
+{
+    "lat": "19.0760",
+    "lon": "72.8777"
+}
+###
+
+POST  http://localhost:3000/location/autocomplete HTTP/1.1
+content-type: application/json
+
+{
+    "name": "seawoods"
+}
+###
+
+POST  http://localhost:3000/allinone HTTP/1.1
+content-type: application/json
+
+{
+    "src":"mumbai",
+    "dest": "goa"
+}
+
+###
+
+POST  http://localhost:3000/getpackages/ HTTP/1.1
+content-type: application/json
+
+{
+    "src":"Delhi",
+    "dest": "Ahmedabad",
+    "checkin":"Fri Mar 24 2021 00:00:00 GMT+0530 (India Standard Time)"
+}
+
+###
+POST  http://localhost:3000/getpackages/trains HTTP/1.1
+content-type: application/json
+
+{
+    "src":"Mumbai",
+    "dest": "Lucknow",
+    "checkin":"Fri Mar 24 2021 00:00:00 GMT+0530 (India Standard Time)",
+    "persons": 1
+}
+
+
+###
+POST  http://localhost:3000/getpackages/ HTTP/1.1
+content-type: application/json
+
+{
+    "src":"Mumbai",
+    "dest": "Ahmedabad",
+    "checkin":"Fri Apr 10 2021 00:00:00 GMT+0530 (India Standard Time)",
+    "checkout":"Fri Apr 12 2021 00:00:00 GMT+0530 (India Standard Time)",
+    "persons": 1
+}
+
+###
+POST  http://localhost:3000/sendmail HTTP/1.1
+content-type: application/json
+
+{
+    "name":"Customer",
+    "email":"elroygomes30@gmail.com"
+}
+###
+
+POST  http://localhost:3000/packages/save HTTP/1.1
+content-type: application/json
+
+{
+    "id": "elroygomes30@gmail.com",
+    "type": "new",
+    "package": "{name: leisure1, package:{src: mumbai,dest: lucknow}}",
+    "date": "today"
+}
+
+###
+
+POST  http://localhost:3000/packages/fetch HTTP/1.1
+content-type: application/json
+
+{
+    "id": "elroygomes30@gmail.com"
+}
+
+
+###
+
+GET http://localhost:3000/auth/profile HTTP/1.1
+content-type: application/json
+
+{
+    "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiJlbHJveWdvbWVzMzBAZ21haWwuY29tIiwidXNlcm5hbWUiOiJFbHJveSAiLCJpYXQiOjE2MTc3ODQ1ODgsImV4cCI6MTYxNzc4ODE4OH0.DYXKn-f76L-DZ7hzR50TYNwCJhdtDW8MCWUs1052dho"
+}
+
+###
+
+POST http://localhost:3000/offers HTTP/1.1
+
